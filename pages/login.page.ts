@@ -19,12 +19,8 @@ export class LoginPage {
     this.loginButton = page.getByRole('button', { name: 'Login' });
 
     this.invalidCredentialsError = page.getByRole('alert');
-    this.usernameError = page.locator(
-      'div.oxd-input-group:has(input[name="username"]) .oxd-input-field-error-message',
-    );
-    this.passwordError = page.locator(
-      'div.oxd-input-group:has(input[name="password"]) .oxd-input-field-error-message',
-    );
+    this.usernameError = page.locator('div.oxd-input-group:has(input[name="username"]) .oxd-input-field-error-message');
+    this.passwordError = page.locator('div.oxd-input-group:has(input[name="password"]) .oxd-input-field-error-message');
   }
 
   async goto() {

@@ -8,8 +8,13 @@
   "license": "ISC",
   "type": "commonjs",
   "scripts": {
-    "prettier": "prettier --check '**/*.{ts,js,json,md}'",
-    "prettier:fix": "prettier --write '**/*.{ts,js,json,md}'"
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:debug": "npx playwright test --debug",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
