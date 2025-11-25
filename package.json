@@ -13,6 +13,7 @@
     "test:ui": "npx playwright test --ui",
     "test:report": "npx playwright show-report",
     "test:debug": "npx playwright test --debug",
+    "codegen": "playwright codegen -b chromium https://opensource-demo.orangehrmlive.com/",
     "prettier": "prettier . --check",
     "prettier:fix": "prettier . --write"
   },

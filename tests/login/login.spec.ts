@@ -1,13 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
 import { LoginPage } from '@pages/login.page';
+import { test } from '@fixtures/auth.fixture';
 
 test.describe('Login', () => {
-  test('should allow login with valid credentials', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-
-    await loginPage.goto();
-    await loginPage.loginAsAdmin();
-
+  test('should allow login with valid credentials', async ({ loggedInPage }) => {
+    const page = loggedInPage;
     await expect(page).toHaveURL(/dashboard/);
     await expect(page.getByRole('heading', { level: 6 })).toHaveText('Dashboard');
   });

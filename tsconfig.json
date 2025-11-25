@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "target": "ES2022",
     "module": "CommonJS",
     "lib": ["ES2022", "DOM"],
@@ -14,7 +15,8 @@
     "paths": {
       "@pages/*": ["pages/*"],
       "@tests/*": ["tests/*"],
-      "@helpers/*": ["helpers/*"]
+      "@helpers/*": ["helpers/*"],
+      "@fixtures/*": ["fixtures/*"]
     }
   },
   "include": ["tests/**/*.ts", "pages/**/*.ts", "helpers/**/*.ts"],
